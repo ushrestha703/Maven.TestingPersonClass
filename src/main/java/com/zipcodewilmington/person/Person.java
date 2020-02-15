@@ -6,7 +6,7 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
-    private int id;
+    private int zipCode;
     private String hairColor;
     private String eyeColor;
 
@@ -29,23 +29,23 @@ public class Person {
         this.age = age;
     }
 
-    public Person(String name, int age, int id) {
+    public Person(String name, int age, int zipCode) {
         this.name = name;
         this.age = age;
-        this.id = id;
+        this.zipCode = zipCode;
     }
 
-    public Person(String name, int age, int id, String hairColor) {
+    public Person(String name, int age, int zipCode, String hairColor) {
         this.name = name;
         this.age = age;
-        this.id = id;
+        this.zipCode = zipCode;
         this.hairColor = hairColor;
     }
 
-    public Person(String name, int age, int id, String hairColor, String eyeColor) {
+    public Person(String name, int age, int zipCode, String hairColor, String eyeColor) {
         this.name = name;
         this.age = age;
-        this.id = id;
+        this.zipCode = zipCode;
         this.hairColor = hairColor;
         this.eyeColor = eyeColor;
     }
@@ -58,8 +58,8 @@ public class Person {
         this.age = age;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
     }
 
     public void setHairColor(String hairColor) {
@@ -80,9 +80,9 @@ public class Person {
         return age;
     }
 
-    public Integer getId() {
+    public Integer getZipCode() {
 
-        return id;
+        return zipCode;
     }
 
     public String getHairColor() {

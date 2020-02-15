@@ -54,7 +54,7 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithId() {
+    public void testConstructorWithZipCode() {
         // Given
         Integer expected = 0;
 
@@ -62,7 +62,7 @@ public class TestPerson {
         Person person = new Person(expected);
 
         // Then
-        Integer actual = person.getId();
+        Integer actual = person.getZipCode();
         Assert.assertEquals(expected, actual);
     }
 
@@ -85,72 +85,72 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithNameAndAgeAndId() {
+    public void testConstructorWithNameAndAgeAndZipCode() {
         // Given
         Integer expectedAge = 5;
         String expectedName = "Leon";
-        Integer expectedId = 1234;
+        Integer expectedZipCode = 19703;
 
         // When
-        Person person = new Person(expectedName, expectedAge, expectedId);
+        Person person = new Person(expectedName, expectedAge, expectedZipCode);
 
         // Then
         Integer actualAge = person.getAge();
         String actualName = person.getName();
-        Integer actualId = person.getId();
+        Integer actualZipCode = person.getZipCode();
 
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
-        Assert.assertEquals(expectedId, actualId);
+        Assert.assertEquals(expectedZipCode, actualZipCode);
     }
 
     @Test
-    public void testConstructorWithNameAndAgeAndIdAndHairColor() {
+    public void testConstructorWithNameAndAgeAndZipCodeAndHairColor() {
         // Given
         Integer expectedAge = 5;
         String expectedName = "Leon";
-        Integer expectedId = 1234;
+        Integer expectedZipCode = 19703;
         String expectedHairColor = "Black";
 
         // When
-        Person person = new Person(expectedName, expectedAge, expectedId, expectedHairColor);
+        Person person = new Person(expectedName, expectedAge, expectedZipCode, expectedHairColor);
 
         // Then
         Integer actualAge = person.getAge();
         String actualName = person.getName();
-        Integer actualId = person.getId();
+        Integer actualZipCode = person.getZipCode();
         String actualHairColor = person.getHairColor();
 
 
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
-        Assert.assertEquals(expectedId, actualId);
+        Assert.assertEquals(expectedZipCode, actualZipCode);
         Assert.assertEquals(expectedHairColor, actualHairColor);
     }
 
     @Test
-    public void testConstructorWithNameAndAgeAndIdAndHairColorAndEyeColor() {
+    public void testConstructorWithNameAndAgeAndZipCodeAndHairColorAndEyeColor() {
         // Given
         Integer expectedAge = 5;
         String expectedName = "Leon";
-        Integer expectedId = 1234;
+        Integer expectedZipCode = 19703;
         String expectedHairColor = "Black";
         String expectedEyeColor = " Blue";
 
         // When
-        Person person = new Person(expectedName, expectedAge, expectedId, expectedHairColor, expectedEyeColor);
+        Person person = new Person(expectedName, expectedAge, expectedZipCode, expectedHairColor, expectedEyeColor);
 
         // Then
         Integer actualAge = person.getAge();
         String actualName = person.getName();
-        Integer actualId = person.getId();
+        Integer actualZipCode = person.getZipCode();
         String actualHairColor = person.getHairColor();
         String actualEyeColor = person.getEyeColor();
 
 
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
-        Assert.assertEquals(expectedId, actualId);
+        Assert.assertEquals(expectedZipCode, actualZipCode);
         Assert.assertEquals(expectedHairColor, actualHairColor);
         Assert.assertEquals(expectedEyeColor, actualEyeColor);
     }
@@ -184,16 +184,16 @@ public class TestPerson {
     }
 
     @Test
-    public void testSetId() {
+    public void testSetZipCode() {
         // Given
         Person person = new Person();
-        Integer expected = 1234;
+        Integer expected = 19703;
 
         // When
-        person.setId(expected);
+        person.setZipCode(expected);
 
         // Then
-        Integer actual = person.getId();
+        Integer actual = person.getZipCode();
         Assert.assertEquals(expected, actual);
     }
 
